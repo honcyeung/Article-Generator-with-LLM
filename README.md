@@ -48,4 +48,4 @@ The diagram below illustrates the end-to-end process, from running the script to
 4.  **Frontmatter Creation:** The script combines the title, description, and tags with other metadata (like the date and author) and uses the `PyYAML` library to generate a safe and valid YAML frontmatter block.
 5.  **File Assembly:** The YAML frontmatter is prepended to the article's Markdown body, creating a single, publish-ready `.md` file.
 6.  **Local Save:** The final file is saved locally in an `output/` directory for review.
-7.  **Publishing (Optional):** The script can be configured to automatically place the new `.md` file into a local clone of a Hugo site's repository and run `git add`, `git commit`, and `git push` to publish the article.
+7.  **Publishing:** The script can be configured to automatically place the new `.md` file into a local clone of a Hugo site's repository and run `git add`, `git commit`, and `git push` to publish the article.
