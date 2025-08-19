@@ -35,7 +35,7 @@ The diagram below illustrates the end-to-end process, from running the script to
          V
 +---------------------+      +-------------------+      +----------------------+
 |  Hugo GitHub Repo   |----->|      Vercel       |----->|     Live Website     |
-|    (my-hugo-blog)   |      | (Build & Deploy)  |      |                      |
+|    (my-hugo-blog)   |      | (Build & Deploy)  |      | (Future Development) |
 +---------------------+      +-------------------+      +----------------------+
 
 ```
