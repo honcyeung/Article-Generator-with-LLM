@@ -24,9 +24,9 @@
         .timeline-container::before {
             content: '';
             position: absolute;
-            top: 1rem;
-            left: 2rem;
-            bottom: 1rem;
+            top: 1.25rem;
+            left: 2.5rem; /* Centered for w-20 icons */
+            bottom: 1.25rem;
             width: 4px;
             background-color: #e5e7eb; /* gray-200 */
             border-radius: 2px;
@@ -72,70 +72,65 @@
             <!-- Step 1 -->
             <div class="step-wrapper mb-8">
                 <div id="step-1" class="timeline-step flex items-center gap-6 cursor-pointer" onclick="toggleDetails(1)">
-                    <div class="icon-container w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
-                        <i class="fas fa-scroll text-2xl text-blue-500"></i>
+                    <div class="icon-container w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
+                        <i class="fas fa-scroll text-3xl text-blue-500"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold">Prompt Retrieval</h3>
+                    <h3 class="text-3xl font-semibold">Prompt Retrieval</h3>
                 </div>
                 <div id="detail-1" class="detail-panel ml-10 px-12 bg-white rounded-2xl shadow-md border border-gray-200">
-                    <p class="text-gray-600 text-justify">The process begins by fetching a carefully crafted prompt from an external API (PromptLayer). This prompt acts as the creative brief for the AI, defining the tone, style, and structure of the desired article. Storing the prompt externally allows for easy updates without altering the core application code.</p>
-                    <div class="mt-4 text-sm text-gray-500"><strong>Technology:</strong> Python `requests`, PromptLayer API</div>
+                    <p class="text-gray-700 text-xl text-justify">Fetches a dynamic, pre-engineered prompt from an external API. This acts as the creative brief for the AI and can be updated without changing the application code.</p>
                 </div>
             </div>
 
             <!-- Step 2 -->
             <div class="step-wrapper mb-8">
                 <div id="step-2" class="timeline-step flex items-center gap-6 cursor-pointer" onclick="toggleDetails(2)">
-                    <div class="icon-container w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
-                        <i class="fas fa-magic-wand-sparkles text-2xl text-purple-500"></i>
+                    <div class="icon-container w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
+                        <i class="fas fa-magic-wand-sparkles text-3xl text-purple-500"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold">Article Generation</h3>
+                    <h3 class="text-3xl font-semibold">Article Generation</h3>
                 </div>
                 <div id="detail-2" class="detail-panel ml-10 px-12 bg-white rounded-2xl shadow-md border border-gray-200">
-                    <p class="text-gray-600 text-justify">With the prompt in hand, the script communicates with the Google Gemini API. The Large Language Model interprets the instructions and generates a complete, high-quality article in Markdown format. This step is where the core creative work happens, turning a simple idea into a full-fledged piece of content.</p>
-                    <div class="mt-4 text-sm text-gray-500"><strong>Technology:</strong> Google Gemini API, Python `requests`</div>
+                    <p class="text-gray-700 text-xl text-justify">Sends the prompt to the Google Gemini API, which interprets the instructions and generates a complete, high-quality article in Markdown format.</p>
                 </div>
             </div>
 
             <!-- Step 3 -->
             <div class="step-wrapper mb-8">
                 <div id="step-3" class="timeline-step flex items-center gap-6 cursor-pointer" onclick="toggleDetails(3)">
-                    <div class="icon-container w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
-                        <i class="fas fa-tags text-2xl text-green-500"></i>
+                    <div class="icon-container w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
+                        <i class="fas fa-tags text-3xl text-green-500"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold">SEO Metadata</h3>
+                    <h3 class="text-3xl font-semibold">SEO Metadata</h3>
                 </div>
                 <div id="detail-3" class="detail-panel ml-10 px-12 bg-white rounded-2xl shadow-md border border-gray-200">
-                    <p class="text-gray-600 text-justify">A well-written article needs to be discoverable. The generated text is sent back to the Gemini API with a second, more specific prompt, asking for an SEO-friendly description and relevant tags. The AI returns this data in a structured JSON format for easy processing.</p>
-                    <div class="mt-4 text-sm text-gray-500"><strong>Technology:</strong> Google Gemini API (JSON Mode), Python `json`</div>
+                    <p class="text-gray-700 text-xl text-justify">The generated article is sent back to the Gemini API, which extracts key information and returns an SEO-friendly description and relevant tags as structured JSON data.</p>
                 </div>
             </div>
 
             <!-- Step 4 -->
             <div class="step-wrapper mb-8">
                 <div id="step-4" class="timeline-step flex items-center gap-6 cursor-pointer" onclick="toggleDetails(4)">
-                    <div class="icon-container w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
-                        <i class="fas fa-puzzle-piece text-2xl text-yellow-500"></i>
+                    <div class="icon-container w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
+                        <i class="fas fa-puzzle-piece text-3xl text-yellow-500"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold">File Assembly</h3>
+                    <h3 class="text-3xl font-semibold">File Assembly</h3>
                 </div>
                 <div id="detail-4" class="detail-panel ml-10 px-12 bg-white rounded-2xl shadow-md border border-gray-200">
-                    <p class="text-gray-600 text-justify">The script assembles the final, publish-ready file. It takes the SEO metadata (title, description, tags) and formats it into a YAML "frontmatter" block—a standard for static site generators. This block is then prepended to the Markdown article content, creating a single, complete `.md` file.</p>
-                    <div class="mt-4 text-sm text-gray-500"><strong>Technology:</strong> Python `PyYAML`, File I/O</div>
+                    <p class="text-gray-700 text-xl text-justify">Assembles the final `.md` file by formatting the SEO metadata into a YAML "frontmatter" block and prepending it to the Markdown article content.</p>
                 </div>
             </div>
 
             <!-- Step 5 -->
             <div class="step-wrapper">
                 <div id="step-5" class="timeline-step flex items-center gap-6 cursor-pointer" onclick="toggleDetails(5)">
-                    <div class="icon-container w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
-                        <i class="fas fa-rocket text-2xl text-red-500"></i>
+                    <div class="icon-container w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center border-4 border-gray-200 flex-shrink-0">
+                        <i class="fas fa-rocket text-3xl text-red-500"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold">Publishing</h3>
+                    <h3 class="text-3xl font-semibold">Publishing</h3>
                 </div>
                 <div id="detail-5" class="detail-panel ml-10 px-12 bg-white rounded-2xl shadow-md border border-gray-200">
-                    <p class="text-gray-600 text-justify">The final step is fully automated deployment. The script places the newly created Markdown file into a local Git repository that powers a Hugo website. It then programmatically runs `git add`, `git commit`, and `git push`. This push automatically triggers a build and deployment process on a hosting platform like Vercel, making the new article live on the web.</p>
-                    <div class="mt-4 text-sm text-gray-500"><strong>Technology:</strong> Python `subprocess`, Git, Hugo, Vercel</div>
+                    <p class="text-gray-700 text-xl text-justify">The completed file is automatically placed in a Git repository. The script then runs `git add`, `commit`, and `push` to deploy the article to a live website via a hosting service like Vercel.</p>
                 </div>
             </div>
         </div>
