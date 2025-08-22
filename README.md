@@ -1,4 +1,5 @@
 # AI-Powered Content Generation Pipeline
+[View the interactive workflow diagram here](https://honcyeung.github.io/Article-Generator-with-LLM/)
 
 This project is a fully automated content pipeline that uses a Large Language Model (LLM) to generate, format, and publish high-quality blog articles to a live website.
 
